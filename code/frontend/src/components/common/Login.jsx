@@ -4,16 +4,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { message } from 'antd';
 import { Button, Form } from 'react-bootstrap';
-import photo1 from '../../images/photo1.png'
+// import photo1 from '../../images/photo1.png';
 import axios from 'axios';
 import { Link, useNavigate} from 'react-router-dom';
 import {
   MDBContainer,
   MDBCard,
   MDBCardBody,
-  MDBCardImage,
+  // MDBCardImage,
   MDBRow,
-  MDBCol,
+  // MDBCol,
   MDBInput
 }
   from 'mdb-react-ui-kit';
@@ -71,7 +71,7 @@ const Login = () => {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand>
-            <Link to={'/'}>MediCareBook</Link>
+            <Link to={'/'} className='logo'>VR<sup>2</sup>e-Clinic</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -82,9 +82,9 @@ const Login = () => {
             >
             </Nav>
             <Nav>
-              <Link to={'/'}>Home</Link>
-              <Link to={'/login'}>Login</Link>
-              <Link to={'/register'}>Register</Link>
+              <Link to={'/'} className='nav-items'>Home</Link>
+              <Link to={'/login'} className='nav-items'>Login</Link>
+              <Link to={'/register'} className='nav-items'>Register</Link>
             </Nav>
 
           </Navbar.Collapse>
@@ -94,24 +94,24 @@ const Login = () => {
 
       <MDBContainer className="my-5">
 
-        <MDBCard style={{ border: 'none' }}>
-          <MDBRow style={{ background: 'rgb(190, 203, 203)' }} className='g-0 border-none p-3'>
+        <MDBCard style={{ border: 'none' }} className='w-50 h-50 mx-auto'>
+          <MDBRow style={{ background: 'white' }} className='g-0 border-none p-3 rounded'>
 
-            <MDBCol md='6'>
+            {/* <MDBCol md='6'>
               <MDBCardImage src={photo1} alt="login form" className='rounded-start w-100' />
-            </MDBCol>
+            </MDBCol> */}
 
-            <MDBCol md='6'>
+             {/* <MDBCol md='6'> */}
               <MDBCardBody className='d-flex mx-5 flex-column'>
 
-                <div className='d-flex flex-row mt-2 mb-5'>
-                  <span className="h1 fw-bold mb-0">Sign in to your account</span>
+                <div className='d-flex flex-row mt-2 mb-5 justify-content-center'>
+                  <span className="h1 fw-bold mb-0 text-center">Sign in to your account</span>
                 </div>
 
                 <Form onSubmit={handleSubmit}>
-                <label className="form-label" htmlFor="formControlLgEmail">Email</label>
+                <label className="form-label fw-bold" htmlFor="formControlLgEmail">Email</label>
                   <MDBInput
-                    style={{ margin: '5px auto' }}
+                    style={{ margin: '5px auto', background: '#f0f0f0' }}
                     name="email"
                     value={user.email}
                     onChange={handleChange}
@@ -119,10 +119,11 @@ const Login = () => {
                     type="email"
                     size="md"
                     autoComplete='off'
+                    className='rounded-pill'
                   />
-                  <label className="form-label" htmlFor="formControlLgPassword">Password</label>
+                  <label className="form-label fw-bold" htmlFor="formControlLgPassword">Password</label>
                   <MDBInput
-                    style={{ margin: '5px auto' }}
+                    style={{ margin: '5px auto', background: '#f0f0f0' }}
                     name="password"
                     value={user.password}
                     onChange={handleChange}
@@ -130,13 +131,15 @@ const Login = () => {
                     type="password"
                     size="md"
                     autoComplete='off'
+                    className='rounded-pill'
                   />
-                  <Button className="mb-4 px-5 bg-dark" size='lg' type='submit'>Login</Button>
+                  <br></br>
+                  <Button className="mb-4 px-5 btn-hvr" size='lg' type='submit'>Login</Button>
                 </Form>
-                <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <Link to={'/register'} style={{ color: '#393f81' }}>Register here</Link></p>
+                <p className="mb-5 pb-lg-2" style={{ color: 'black' }}>Don't have an account? <Link to={'/register'} style={{ color: 'blue'}}>Register here</Link></p>
 
               </MDBCardBody>
-            </MDBCol>
+              {/* </MDBCol> */}
 
           </MDBRow>
         </MDBCard>

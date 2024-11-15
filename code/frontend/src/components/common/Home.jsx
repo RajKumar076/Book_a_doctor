@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
+        <Container fluid className='nav-container'>
           <Navbar.Brand>
-            <Link to={'/'}>MediCareBook</Link>
+            <Link to={'/'} className='logo'>VR<sup>2</sup>e-Clinic</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -22,10 +22,10 @@ const Home = () => {
               navbarScroll
             >
             </Nav>
-            <Nav>
-              <Link to={'/'}>Home</Link>
-              <Link to={'/login'}>Login</Link>
-              <Link to={'/register'}>Register</Link>
+            <Nav className='nav-item-bar'>
+              <Link to={'/'} className='nav-items'>Home</Link>
+              <Link to={'/login'} className='nav-items'>Login</Link>
+              <Link to={'/register'} className='nav-items'>Register</Link>
             </Nav>
 
           </Navbar.Collapse>
@@ -33,16 +33,17 @@ const Home = () => {
       </Navbar>
 
       <div className='home-container'>
-        <div className="left-side">
-          <img alt="" src={p3} />
-        </div>
+        
         <div className="right-side">
           <p>
             <span className='f-letter'>Effortlessly schedule your doctor</span><br />
             <span className='s-letter'>appointments with just a few clicks,</span> <br />
             <span className='t-letter'>putting your health in your hands.</span><br />
-            <Button color='info' className='mt-3 register'><Link to={'/Login'}>Book your Doctor</Link></Button>
+            <Link to={'/Login'}><Button  className='mt-3 rounded-pill register-btn'>Book your Doctor</Button></Link>
           </p>
+        </div>
+        <div className="left-side">
+          <img alt="" src={p3} />
         </div>
       </div>
 

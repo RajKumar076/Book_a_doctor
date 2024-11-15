@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const fs = require("fs");
+const multer = require("multer");
 
 const userSchema = require("../schemas/userModel");
 const docSchema = require("../schemas/docModel");
@@ -95,11 +96,24 @@ const authController = async (req, res) => {
 /////for the doctor registration of user
 const docController = async (req, res) => {
   try {
-    const { doctor, userId } = req.body;
+    const doctor = {fullName:req.body.fullName,
+      email:req.body.email,
+      phone: req.body.phone,
+      address: req.body.address,
+      specialization: req.body.specialization,
+      experience: req.body.experience,
+      fees: req.body.fees,
+      timings: req.body.timings
+    };
+    const userId = req.body.userId;
+    const imgfile = req.file;
+
+    console.log(imgfile)
 
     const newDoctor = new docSchema({
       ...doctor,
       userId: userId.toString(),
+      image: imgfile.filename,
       status: "pending",
     });
     await newDoctor.save();
@@ -308,7 +322,27 @@ const getDocsController = async (req, res) => {
   }
 };
 
-
+const getImageController = async (req, res) => {
+  try {
+    const doc = await docSchema.find();;
+    if (!doc) {
+      return res.status(201).send({
+        message: "No documnets",
+        success: true,
+      });
+    }
+    const images = doc.map((doc) => doc?.image);
+    res.status(200).json({
+      success: true,
+      images
+    })
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .send({ message: "something went wrong", success: false, error });
+  }
+}
 
 module.exports = {
   registerController,
@@ -321,4 +355,5 @@ module.exports = {
   appointmentController,
   getAllUserAppointments,
   getDocsController,
+  getImageController
 };

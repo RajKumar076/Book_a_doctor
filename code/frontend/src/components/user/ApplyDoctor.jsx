@@ -15,17 +15,29 @@ function ApplyDoctor({ userId }) {
       timings: '',
    });
 
+   const [file, setFile] = useState();
+
    const handleTimingChange = (_, timings) => {
       setDoctor({ ...doctor, timings });
    };
 
    const handleChange = (e) => {
-      setDoctor({ ...doctor, [e.target.name]: e.target.value })
+      setDoctor({ ...doctor, [e.target.name]: e.target.value });
    }
    const handleSubmit = async () => {
-      
       try {
-         const res = await axios.post('http://localhost:8001/api/user/registerdoc', { doctor, userId: userId }, {
+         const formdata = new FormData();
+         formdata.append('fullName', doctor.fullName)
+         formdata.append('email', doctor.email)
+         formdata.append('phone', doctor.phone)
+         formdata.append('address', doctor.address)
+         formdata.append('specialization', doctor.specialization)
+         formdata.append('experience', doctor.experience)
+         formdata.append('fees', doctor.fees)
+         formdata.append('timings', doctor.timings)
+         formdata.append('userId', userId)
+         formdata.append('docimage', file)
+         const res = await axios.post('http://localhost:8001/api/user/registerdoc', formdata,{
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -66,6 +78,11 @@ function ApplyDoctor({ userId }) {
                <Col xs={24} md={12} lg={8}>
                   <Form.Item label="Address" required>
                      <Input value={doctor.address} onChange={handleChange} name='address' type='text' placeholder='Your address' />
+                  </Form.Item>
+               </Col>
+               <Col xs={24} md={12} lg={8}>
+                  <Form.Item label="Doctor image">
+                     <input type="file" value={doctor.docimage} onChange={(e)=>{setFile(e.target.files[0])}} name='docimage'/>
                   </Form.Item>
                </Col>
             </Row>

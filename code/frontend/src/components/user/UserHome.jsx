@@ -110,7 +110,10 @@ const UserHome = () => {
                         <h3>{userdata.fullName}</h3>
                      </div>
                   </div>
-                  <div className="body">
+                  <div className="body" style={{
+                     height: "100vh",
+                     overflow: "auto"
+                  }}>
                      {activeMenuItem === 'applyDoctor' && <ApplyDoctor userId={userdata._id} />}
                      {activeMenuItem === 'notification' && <Notification />}
                      {activeMenuItem === 'userappointments' && <UserAppointments />}
@@ -135,4 +138,3 @@ const UserHome = () => {
 };
 
 export default UserHome;
-

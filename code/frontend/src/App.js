@@ -11,7 +11,10 @@ import UserAppointments from "./components/user/UserAppointments";
 function App() {
   const userLoggedIn = !!localStorage.getItem("userData");
   return (
-    <div className="App">
+    <div style={{
+      height:"100%",
+      position: "relative",
+    }} className="App">
       <Router>
         <CookiesProvider>
         <div className="content">
@@ -29,9 +32,17 @@ function App() {
               <Route path="/login" element={<Login />} />
             )}
           </Routes>
-        </div>
+          </div>
+          <br />
         <footer className="bg-light text-center text-lg-start">
-          <div className="text-center p-3">© 2024 Copyright: VR<sup>2</sup>e-Clinic</div>
+            <div className="text-center p-3" style={
+              {
+                position: "absolute",
+                top: "115vh",
+                width: "100%",
+                textAlign: "center"
+              }
+          }>© 2023 Copyright: MediCareBook</div>
           </footer>
         </CookiesProvider>
       </Router>

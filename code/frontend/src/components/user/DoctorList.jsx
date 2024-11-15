@@ -13,6 +13,7 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
    const [dateTime, setDateTime] = useState('');
    const [documentFile, setDocumentFile] = useState(null);
    const [show, setShow] = useState(false);
+   // const [image,setImage] = useState()
 
    const currentDate = new Date().toISOString().slice(0, 16);
 
@@ -58,10 +59,39 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
          console.log(error)
       }
    }
+   // const getImage = async () => {
+   //    try {
+   //       const res = await axios.get(`http://localhost:8001/api/user/getimage`)
+   //       setImage(res.data.images)
+   //       console.log(res)
+   //    } catch (error) {
+   //       console.log(error)
+   //    }
+   // }
+   // useEffect(() => {
+   //    getImage()
+   // },[])
    return (
       <>
-         <Card style={{ width: '18rem' }}>
+         <Card style={{ width: '20rem', margin: "33px" }}>
             <Card.Body>
+               {/* {image.map((img) => {
+                  return (
+                     <div>
+                        <img style={{height:"200px",width:"200px"}} src={"http://localhost:8001/"+img} alt='doctor'/>
+                        <p>Dr. {doctor.fullName}</p>
+                        <p>Phone: <b>{doctor.phone}</b></p>
+                        <p>Address: <b>{doctor.address}</b></p>
+                        <p>Specialization: <b>{doctor.specialization}</b></p>
+                        <p>Experience: <b>{doctor.experience} Yrs</b></p>
+                        <p>Fees: <b>{doctor.fees}</b></p>
+                     </div>
+                  )
+               })} */}
+               {/* <Card.Text>
+                  <p>Timing: <b>{doctor.timings[0]} : {doctor.timings[1]}</b></p>
+               </Card.Text> */}
+               <Card.Img variant="top" style={{height:"200px",width:"200px"}} src={"http://localhost:8001/"+doctor.image} />
                <Card.Title>Dr. {doctor.fullName}</Card.Title>
                <Card.Text>
                   <p>Phone: <b>{doctor.phone}</b></p>
@@ -78,9 +108,9 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
                <Card.Text>
                   <p>Fees: <b>{doctor.fees}</b></p>
                </Card.Text>
-               <Card.Text>
+               {/* <Card.Text>
                   <p>Timing: <b>{doctor.timings[0]} : {doctor.timings[1]}</b></p>
-               </Card.Text>
+               </Card.Text> */}
                <Button variant="primary" onClick={handleShow}>
                   Book Now
                </Button>

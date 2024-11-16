@@ -91,7 +91,7 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
                {/* <Card.Text>
                   <p>Timing: <b>{doctor.timings[0]} : {doctor.timings[1]}</b></p>
                </Card.Text> */}
-               <Card.Img variant="top" style={{height:"200px",width:"200px"}} src={"http://localhost:8001/"+doctor.image} />
+               <Card.Img variant="top" style={{height:"200px",width:"100%",marginBottom:"10px"}} src={"http://localhost:8001/"+doctor.image} />
                <Card.Title>Dr. {doctor.fullName}</Card.Title>
                <Card.Text>
                   <p>Phone: <b>{doctor.phone}</b></p>

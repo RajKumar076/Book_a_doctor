@@ -12,12 +12,15 @@ function App() {
   const userLoggedIn = !!localStorage.getItem("userData");
   return (
     <div style={{
-      height:"100%",
-      position: "relative",
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      minHeight: "125vh"
     }} className="App">
       <Router>
         <CookiesProvider>
-        <div className="content">
+        <div className="content" style={{flex: 1}}>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
@@ -34,18 +37,18 @@ function App() {
           </Routes>
           </div>
           <br />
-        <footer className="bg-light text-center text-lg-start">
-            <div className="text-center p-3" style={
-              {
-                position: "absolute",
-                top: "115vh",
-                width: "100%",
-                textAlign: "center"
-              }
-          }>© 2023 Copyright: MediCareBook</div>
-          </footer>
         </CookiesProvider>
       </Router>
+      <footer className="bg-light text-center" style={{position:"relative"}}>
+            <div className="text-center p-3" style={
+              {
+                position: "static",
+                // bottom: "0",
+                width: "100%",
+                // height:"1rem"
+              }
+          }>© 2023 Copyright: MediCareBook</div>
+        </footer>
     </div>
   );
 }

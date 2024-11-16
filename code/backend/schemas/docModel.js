@@ -47,7 +47,7 @@ const docModel = mongoose.Schema(
     },
     image: {
       type: String,
-      default: "docimage_1731480989354.png",
+      default: "doctor2.jpg",
     }
   },
   {

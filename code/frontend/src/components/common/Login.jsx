@@ -92,7 +92,7 @@ const Login = () => {
       </Navbar>
 
 
-      <MDBContainer className="my-5">
+      <MDBContainer className="my-5" style={{ position: 'relative', top: '46px' }}>
 
         <MDBCard style={{ border: 'none' }} className='w-50 h-50 mx-auto'>
           <MDBRow style={{ background: 'white' }} className='g-0 border-none p-3 rounded'>

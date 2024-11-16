@@ -77,23 +77,23 @@ const UserHome = () => {
          <div className='main'>
             <div className="layout">
                <div className="sidebar" style={{height:"112.7vh",backgroundColor:"#f5f5f5",color:"rgb(229,9,20)"}}>
-                  <div className="logo" style={{color:"#279681",marginBottom:"12rem",marginTop:"1rem"}}>
+                  <div className="logo" style={{marginBottom:"12rem",marginTop:"1rem"}}>
                      <h2>MediCareBook</h2>
                   </div>
                   <div className="menu">
                      <div className="menu-items" onClick={()=>{window.location.href="/userhome"}}>
-                        <HomeIcon className='icon' />&nbsp;<Link>HomePage</Link>
+                        <HomeIcon className='icon' />&nbsp; &nbsp;<Link>HomePage</Link>
                      </div>
                      <div className={`menu-items ${activeMenuItem === 'userappointments' ? 'active' : ''}`} onClick={() => handleMenuItemClick('userappointments')}>
-                        <CalendarMonthIcon className='icon' />&nbsp;<Link>Appointments</Link>
+                        <CalendarMonthIcon className='icon' />&nbsp; &nbsp;<Link>Appointments</Link>
                      </div>
                      {userdata.isdoctor === true ? <></> : <div className={`menu-items ${activeMenuItem === 'applyDoctor' ? 'active' : ''}`} onClick={() => handleMenuItemClick('applyDoctor')}>
-                        <MedicationIcon className='icon' />&nbsp;<Link>Apply doctor</Link>
+                        <MedicationIcon className='icon' />&nbsp; &nbsp;<Link>Apply doctor</Link>
                      </div>}
                      
                      
                      <div className="menu-items" onClick={logout}>
-                        <LogoutIcon className='icon' />&nbsp;<Link>Logout</Link>
+                        &nbsp;<LogoutIcon className='icon' />&nbsp;&nbsp;<Link>Logout</Link>
                      </div>
                   </div>
                </div>

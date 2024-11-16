@@ -99,7 +99,7 @@ const UserHome = () => {
                </div>
                <div className="content">
                   <div className="header">
-                     <div className="header-content" style={{}}>
+                     <div className="header-content">
                         
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
                            <NotificationsIcon style={{color:"rgb(229,9,20)"}} className="icon" />

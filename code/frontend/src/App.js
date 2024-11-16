@@ -11,10 +11,16 @@ import UserAppointments from "./components/user/UserAppointments";
 function App() {
   const userLoggedIn = !!localStorage.getItem("userData");
   return (
-    <div className="App">
+    <div style={{
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      minHeight: "125vh"
+    }} className="App">
       <Router>
         <CookiesProvider>
-        <div className="content">
+        <div className="content" style={{flex: 1}}>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
@@ -29,12 +35,20 @@ function App() {
               <Route path="/login" element={<Login />} />
             )}
           </Routes>
-        </div>
-        <footer className="bg-light text-center text-lg-start">
-          <div className="text-center p-3">© 2023 Copyright: MediCareBook</div>
-          </footer>
+          </div>
+          <br />
         </CookiesProvider>
       </Router>
+      <footer className="bg-light text-center" style={{position:"relative"}}>
+            <div className="text-center p-3" style={
+              {
+                position: "static",
+                // bottom: "0",
+                width: "100%",
+                // height:"1rem"
+              }
+          }>© 2023 Copyright: MediCareBook</div>
+        </footer>
     </div>
   );
 }

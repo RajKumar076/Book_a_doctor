@@ -14,7 +14,7 @@ body {
 /* ############### Landing Page Start ############### */
 
 .logo{
-  color: rgb(33, 60, 134);
+  color: rgb(0, 0, 0);
   font-size: larger;
   font-weight: 800;
 }
@@ -98,6 +98,7 @@ a {
 }
 
 .right-side {
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

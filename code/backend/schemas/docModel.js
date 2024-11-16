@@ -43,8 +43,12 @@ const docModel = mongoose.Schema(
     },
     timings: {
       type: Object,
-      required: [true, "work time required"],
+      // required: [true, "work time required"],
     },
+    image: {
+      type: String,
+      default: "doctor2.jpg",
+    }
   },
   {
     timestamps: true,

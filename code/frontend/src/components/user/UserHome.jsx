@@ -76,43 +76,43 @@ const UserHome = () => {
       <>
          <div className='main'>
             <div className="layout">
-               <div className="sidebar">
-                  <div className="logo">
+               <div className="sidebar" style={{height:"112.7vh",backgroundColor:"#f5f5f5",color:"rgb(229,9,20)"}}>
+                  <div className="logo" style={{color:"#279681",marginBottom:"12rem",marginTop:"1rem"}}>
                      <h2>MediCareBook</h2>
                   </div>
                   <div className="menu">
-                     <div>
-                        <div className='menu-items' style={{cursor:"pointer",color:"black"}} onClick={()=>{window.location.href="/userhome"}}><HomeIcon className='icon' style={{color:"white"}}/>HomePage</div>
+                     <div className="menu-items" onClick={()=>{window.location.href="/userhome"}}>
+                        <HomeIcon className='icon' />&nbsp;<Link>HomePage</Link>
                      </div>
-
                      <div className={`menu-items ${activeMenuItem === 'userappointments' ? 'active' : ''}`} onClick={() => handleMenuItemClick('userappointments')}>
-                        <CalendarMonthIcon className='icon' /><Link>Appointments</Link>
+                        <CalendarMonthIcon className='icon' />&nbsp;<Link>Appointments</Link>
                      </div>
                      {userdata.isdoctor === true ? <></> : <div className={`menu-items ${activeMenuItem === 'applyDoctor' ? 'active' : ''}`} onClick={() => handleMenuItemClick('applyDoctor')}>
-                        <MedicationIcon className='icon' /><Link>Apply doctor</Link>
+                        <MedicationIcon className='icon' />&nbsp;<Link>Apply doctor</Link>
                      </div>}
                      
                      
                      <div className="menu-items" onClick={logout}>
-                        <LogoutIcon className='icon' /><Link>Logout</Link>
+                        <LogoutIcon className='icon' />&nbsp;<Link>Logout</Link>
                      </div>
                   </div>
                </div>
                <div className="content">
                   <div className="header">
-                  <div className='uahh'>
                      <div className="header-content">
+                        
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
-                           <NotificationsIcon className="icon" />
+                           <NotificationsIcon style={{color:"rgb(229,9,20)"}} className="icon" />
                         </Badge>
 
                         {userdata.isdoctor === true && <h3>Dr. </h3>}
-                        <h3>{userdata.fullName}</h3>
-                       
+                        <h3 style={{position:"relative",top:"2px"}}>{userdata.fullName}</h3>
                      </div>
                   </div>
-                  </div>
-                  <div className="body">
+                  <div className="body" style={{
+                     height: "100vh",
+                     overflow: "auto"
+                  }}>
                      {activeMenuItem === 'applyDoctor' && <ApplyDoctor userId={userdata._id} />}
                      {activeMenuItem === 'notification' && <Notification />}
                      {activeMenuItem === 'userappointments' && <UserAppointments />}
@@ -137,4 +137,3 @@ const UserHome = () => {
 };
 
 export default UserHome;
-

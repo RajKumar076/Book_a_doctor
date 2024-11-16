@@ -7,8 +7,56 @@
 }
 
 body {
-  background-color: rgb(190, 203, 203);
+  /* background-color: rgb(190, 203, 203); */
+  background: linear-gradient(-45deg, rgb(33, 60, 134) 20%,rgb(43, 211, 125) 80%, rgb(33, 134, 82) 100%);
 }
+
+/* ############### Landing Page Start ############### */
+
+.logo{
+  color: rgb(33, 60, 134);
+  font-size: larger;
+  font-weight: 800;
+}
+
+.nav-container{
+  /* background-color: rgb(132, 73, 228); */
+  color: rgb(144, 85, 238);
+}
+
+.nav-items{
+  font-weight: 500;
+}
+
+.nav-items:hover{
+  /* transform: scaleX(1); */
+  color: rgb(33, 134, 82);
+} 
+
+.register-btn{
+  background-color: #f0f0f0;
+  color: black;
+  /* border-radius: 25cap; */
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.register-btn:hover{
+  /* background: linear-gradient(-45deg, rgb(33, 60, 134) 20%,rgb(43, 211, 125) 80%, rgb(33, 134, 82) 100%); */
+  background-color: black;
+  color: #f0f0f0;
+}
+
+.btn-hvr{
+  background-color: rgb(92, 156, 118);
+}
+
+.btn-hvr:hover{
+  background-color: rgb(50, 49, 53);
+}
+
+/* ############### Landing Page End ################### */
 
 a {
   color: black;
@@ -53,6 +101,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #f0f0f0;
 }
 
 span {

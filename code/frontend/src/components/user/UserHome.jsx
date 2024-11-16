@@ -99,14 +99,14 @@ const UserHome = () => {
                </div>
                <div className="content">
                   <div className="header">
-                     <div className="header-content">
+                     <div className="header-content" style={{}}>
                         
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
                            <NotificationsIcon style={{color:"rgb(229,9,20)"}} className="icon" />
                         </Badge>
 
                         {userdata.isdoctor === true && <h3>Dr. </h3>}
-                        <h3>{userdata.fullName}</h3>
+                        <h3 style={{position:"relative",top:"2px"}}>{userdata.fullName}</h3>
                      </div>
                   </div>
                   <div className="body" style={{

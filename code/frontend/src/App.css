@@ -121,9 +121,10 @@ span {
 
 .menu {
   margin-top: 100px;
+  margin-left: 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .menu-items {
@@ -235,4 +236,48 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: grey;
   border-radius: 10px;
+}
+
+/*admin*/
+
+/*
+background: linear-gradient(-45deg, rgb(53, 93, 202) 20%,rgb(45, 208, 102) 80%, rgb(19, 227, 61) 100%);
+background: linear-gradient(-45deg,  rgb(19, 227, 61) 20%,rgb(62, 156, 244) 80%, rgb(53, 93, 202) 100%);
+*/
+
+.ahh{
+  background: rgb(20, 148, 240);
+  color: white;
+}
+
+.aa tr th{
+  background: rgb(18, 208, 72);
+  color: white;
+}
+
+/*user*/
+
+.doc-appo-head tr th{                       
+  background: rgb(18, 208, 72);
+  color: white;
+}
+
+.uahh{
+  background: rgb(20, 148, 240);
+  color: white;
+}
+
+/* admin & user */
+
+.main{
+  background: rgb(30, 33, 75);
+}
+
+.sidebar{
+  background: linear-gradient(-45deg,  rgb(18, 212, 57) 20%,rgb(59, 149, 232) 80%, rgb(46, 81, 177) 100%);
+  border: 2px solid  white;
+}
+
+.table{
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.3), -1px -1px 8px rgba(0,0,0,0.3);
 }

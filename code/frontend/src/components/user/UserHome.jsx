@@ -100,15 +100,17 @@ const UserHome = () => {
                </div>
                <div className="content">
                   <div className="header">
+                  <div className='uahh'>
                      <div className="header-content">
-                        
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
                            <NotificationsIcon className="icon" />
                         </Badge>
 
                         {userdata.isdoctor === true && <h3>Dr. </h3>}
                         <h3>{userdata.fullName}</h3>
+                       
                      </div>
+                  </div>
                   </div>
                   <div className="body">
                      {activeMenuItem === 'applyDoctor' && <ApplyDoctor userId={userdata._id} />}

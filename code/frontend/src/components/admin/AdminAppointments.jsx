@@ -31,8 +31,9 @@ const AdminAppointments = () => {
       <div>
          <h2 className='p-3 text-center'>All Appointments for Admin Panel</h2>
          <Container>
+            <div className='aat'>
             <Table className='my-3' striped bordered hover>
-               <thead>
+               <thead className='aa'>
                   <tr>
                      <th>Appointment ID</th>
                      <th>User Name</th>
@@ -66,6 +67,7 @@ const AdminAppointments = () => {
                   )}
                </tbody>
             </Table>
+            </div>
          </Container>
       </div>
    )

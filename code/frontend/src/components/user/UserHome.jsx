@@ -82,19 +82,16 @@ const UserHome = () => {
                   </div>
                   <div className="menu">
                      <div>
-                        <div className='menu-items' style={{cursor:"pointer",color:"black"}} onClick={()=>{window.location.href="/userhome"}}><HomeIcon className='icon' style={{color:"white"}}/>HomePage</div>
+                        <div className='menu-items' style={{cursor:"pointer",color:"white"}} onClick={()=>{window.location.href="/userhome"}}><HomeIcon className='icon' style={{color:"white"}}/>HomePage</div>
                      </div>
-
                      <div className={`menu-items ${activeMenuItem === 'userappointments' ? 'active' : ''}`} onClick={() => handleMenuItemClick('userappointments')}>
-                        <CalendarMonthIcon className='icon' /><Link>Appointments</Link>
+                        <CalendarMonthIcon className='icon' /><Link className='sbm'>Appointments</Link>
                      </div>
                      {userdata.isdoctor === true ? <></> : <div className={`menu-items ${activeMenuItem === 'applyDoctor' ? 'active' : ''}`} onClick={() => handleMenuItemClick('applyDoctor')}>
-                        <MedicationIcon className='icon' /><Link>Apply doctor</Link>
+                        <MedicationIcon className='icon' /><Link className='sbm'>Apply doctor</Link>
                      </div>}
-                     
-                     
                      <div className="menu-items" onClick={logout}>
-                        <LogoutIcon className='icon' /><Link>Logout</Link>
+                        <LogoutIcon className='icon' /><Link className='lo'>Logout</Link>
                      </div>
                   </div>
                </div>
@@ -107,8 +104,7 @@ const UserHome = () => {
                         </Badge>
 
                         {userdata.isdoctor === true && <h3>Dr. </h3>}
-                        <h3>{userdata.fullName}</h3>
-                       
+                        <h3>{userdata.fullName}</h3>                      
                      </div>
                   </div>
                   </div>

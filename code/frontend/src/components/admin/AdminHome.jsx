@@ -52,25 +52,26 @@ const AdminHome = () => {
       setActiveMenuItem(menuItem);
    };
    return (
-      <>     
+   <>
+      
          <div className='main'>           
             <div className="layout">               
                <div className="sidebar">
                   <div className="logo">
-                     <h2>MediCareBook</h2>
-                  </div>                  
+                     <h2>HealPlus<span>&#43;</span></h2>
+                  </div>
                   <div className="menu">
                      <div>
-                        <div className='menu-items' style={{cursor:"pointer",color:"white"}} onClick={()=>{window.location.href="/adminhome"}}><HomeIcon className='icon' style={{color:"white"}}/>HomePage</div>
+                        <div className='menu-items' style={{cursor:"pointer",color:"black"}} onClick={()=>{window.location.href="/adminhome"}}><HomeIcon className='icon' style={{color:"white"}}/>HomePage</div>
                      </div>
                      <div className={`menu-items ${activeMenuItem === 'adminusers' ? 'active' : ''}`} onClick={() => handleMenuItemClick('adminusers')}>
-                        <CalendarMonthIcon className='icon' /><Link className='sbm'>Users</Link>
+                        <CalendarMonthIcon className='icon' /><Link>Users</Link>
                      </div>
                      <div className={`menu-items ${activeMenuItem === 'admindoctors' ? 'active' : ''}`} onClick={() => handleMenuItemClick('admindoctors')}>
-                        <MedicationIcon className='icon' /><Link className='sbm'>Doctor</Link>
+                        <MedicationIcon className='icon' /><Link>Doctor</Link>
                      </div>
                      <div className="menu-items">
-                        <LogoutIcon className='icon' /><Link className="lo" onClick={logout}>Logout</Link>
+                        <LogoutIcon className='icon' /><Link onClick={logout}>Logout</Link>
                      </div>
                   </div>
                </div>   
@@ -81,6 +82,7 @@ const AdminHome = () => {
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
                            <NotificationsIcon className='icon' />
                         </Badge>
+
                         <h3>Hi..{userdata.fullName}</h3>
                      </div>
                      </div>
@@ -93,8 +95,9 @@ const AdminHome = () => {
                   </div>
                </div>
             </div>
-         </div>      
-      </>     
+         </div>
+      
+   </>     
    );
 };
 

@@ -47,7 +47,7 @@ function App() {
                 width: "100%",
                 // height:"1rem"
               }
-          }>© 2023 Copyright: MediCareBook</div>
+          }>© 2024 Copyright: HealPlus<span>&#43;</span></div>
         </footer>
     </div>
   );

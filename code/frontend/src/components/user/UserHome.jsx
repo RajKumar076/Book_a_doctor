@@ -80,7 +80,7 @@ const UserHome = () => {
             <div className="layout">
                <div className="sidebar" style={{height:"112.7vh",backgroundColor:"#f5f5f5",color:"rgb(229,9,20)"}}>
                   <div className="logo" style={{marginBottom:"12rem",marginTop:"1rem"}}>
-                     <h2>MediCareBook</h2>
+                     <h2>HealPlus<span>&#43;</span></h2>
                   </div>
                   <div className="menu">
                      <div className="menu-items" onClick={()=>{window.location.href="/userhome"}}>

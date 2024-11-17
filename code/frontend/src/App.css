@@ -173,11 +173,13 @@ span {
   margin-left: 70px;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
   /* align-items: center; */
 }
 
 .menu-items {
   margin-top: 20px;
+  color: white;
 }
 
 .menu-items p {
@@ -329,4 +331,12 @@ background: linear-gradient(-45deg,  rgb(19, 227, 61) 20%,rgb(62, 156, 244) 80%,
 
 .table{
   box-shadow: 5px 5px 12px rgba(0,0,0,0.3), -1px -1px 8px rgba(0,0,0,0.3);
+}
+
+.sbm{
+  color: white;
+}
+
+.lo{
+  color:rgb(240, 240, 0)
 }

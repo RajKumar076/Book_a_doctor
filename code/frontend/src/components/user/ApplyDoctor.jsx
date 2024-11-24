@@ -85,6 +85,7 @@ function ApplyDoctor({ userId }) {
                      <input type="file" value={doctor.docimage} onChange={(e)=>{setFile(e.target.files[0])}} name='docimage'/>
                   </Form.Item>
                </Col>
+               
             </Row>
             <h4>Professional Details:</h4>
             <Row gutter={20}>

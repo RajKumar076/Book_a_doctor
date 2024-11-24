@@ -52,13 +52,13 @@ const AdminHome = () => {
       setActiveMenuItem(menuItem);
    };
    return (
-      <>
-
-         <div className='main'>
-            <div className="layout">
+   <>
+      
+         <div className='main'>           
+            <div className="layout">               
                <div className="sidebar">
                   <div className="logo">
-                     <h2>MediCareBook</h2>
+                     <h2>HealPlus<span>&#43;</span></h2>
                   </div>
                   <div className="menu">
                      <div>
@@ -74,15 +74,17 @@ const AdminHome = () => {
                         <LogoutIcon className='icon' /><Link onClick={logout}>Logout</Link>
                      </div>
                   </div>
-               </div>
+               </div>   
                <div className="content">
                   <div className="header">
+                     <div className='ahh'>
                      <div className="header-content" style={{ cursor: 'pointer' }}>
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
                            <NotificationsIcon className='icon' />
                         </Badge>
 
                         <h3>Hi..{userdata.fullName}</h3>
+                     </div>
                      </div>
                   </div>
                   <div className="body">
@@ -94,7 +96,8 @@ const AdminHome = () => {
                </div>
             </div>
          </div>
-      </>
+      
+   </>     
    );
 };
 

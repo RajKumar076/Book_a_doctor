@@ -77,7 +77,7 @@ const AdminDoctors = () => {
 
          <Container>
             <Table striped bordered hover>
-               <thead>
+               <thead className='aa'>
                   <tr>
                      <th>Key</th>
                      <th>Name</th>

@@ -71,7 +71,7 @@ const Login = () => {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand>
-            <Link to={'/'} className='logo'>VR<sup>2</sup>e-Clinic</Link>
+            <Link to={'/'} className='logo'>HealPlus<span>&#43;</span></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -92,7 +92,7 @@ const Login = () => {
       </Navbar>
 
 
-      <MDBContainer className="my-5">
+      <MDBContainer className="my-5" style={{ position: 'relative', top: '46px' }}>
 
         <MDBCard style={{ border: 'none' }} className='w-50 h-50 mx-auto'>
           <MDBRow style={{ background: 'white' }} className='g-0 border-none p-3 rounded'>

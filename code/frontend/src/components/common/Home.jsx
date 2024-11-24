@@ -12,7 +12,7 @@ const Home = () => {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid className='nav-container'>
           <Navbar.Brand>
-            <Link to={'/'} className='logo'>VR<sup>2</sup>e-Clinic</Link>
+            <Link to={'/'} className='logo'>HealPlus<span>&#43;</span></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -36,9 +36,10 @@ const Home = () => {
         
         <div className="right-side">
           <p>
-            <span className='f-letter'>Effortlessly schedule your doctor</span><br />
-            <span className='s-letter'>appointments with just a few clicks,</span> <br />
-            <span className='t-letter'>putting your health in your hands.</span><br />
+            <span className='f-letter'>A good doctor treats the disease</span><br />
+            {/* <span className='s-letter'>a great doctor treats the patient who has the disease.</span><br /> */}
+            <span className='t-letter'>Book your appointments with just a few clicks.</span> <br />
+
             <Link to={'/Login'}><Button  className='mt-3 rounded-pill register-btn'>Book your Doctor</Button></Link>
           </p>
         </div>

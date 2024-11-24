@@ -36,7 +36,7 @@ const AdminUsers = () => {
          
          <Container>
             <Table className='my-3' striped bordered hover>
-               <thead>
+               <thead className='aa'>
                   <tr>
                      <th>Name</th>
                      <th>Email</th>

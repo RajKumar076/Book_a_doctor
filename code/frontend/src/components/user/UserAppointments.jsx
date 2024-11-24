@@ -4,6 +4,7 @@ import Alert from 'react-bootstrap/Alert';
 import { Container, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { message } from 'antd';
+// import { color } from 'highcharts';
 
 const UserAppointments = () => {
   const [userid, setUserId] = useState();
@@ -140,7 +141,7 @@ const UserAppointments = () => {
 
         {type === true ? (
           <Table striped bordered hover>
-            <thead>
+            <thead className='doc-appo-head'>
               <tr>
                 <th>Name</th>
                 <th>Date of Appointment</th>

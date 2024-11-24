@@ -81,7 +81,7 @@ function ApplyDoctor({ userId }) {
                   </Form.Item>
                </Col>
                <Col xs={24} md={12} lg={8}>
-                  <Form.Item label="Doctor image">
+                  <Form.Item label="Doctor image" required>
                      <input type="file" value={doctor.docimage} onChange={(e)=>{setFile(e.target.files[0])}} name='docimage'/>
                   </Form.Item>
                </Col>

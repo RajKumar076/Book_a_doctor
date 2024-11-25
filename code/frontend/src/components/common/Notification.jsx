@@ -77,7 +77,7 @@ const Notification = () => {
             </Tabs.TabPane>
             <Tabs.TabPane tab="Read" key={1}>
                <div className="d-flex justify-content-end">
-                  <h4 style={{ cursor: 'pointer' }} onClick={handledeleteAllMark} className="p-2">delete all read</h4>
+                  <h4 style={{ cursor: 'pointer' }} onClick={handledeleteAllMark} className="p-2">Delete all read</h4>
                </div>
                {user?.seennotification.map((notificationMsg) => (
                   <div style={{ cursor: 'pointer' }} className="card" >

@@ -58,7 +58,7 @@ const AdminHome = () => {
             <div className="layout">               
                <div className="sidebar">
                   <div className="logo">
-                     <h2>MediCareBook</h2>
+                     <h2>HealPlus<span>&#43;</span></h2>
                   </div>
                   <div className="menu">
                      <div>

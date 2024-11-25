@@ -71,7 +71,7 @@ const Login = () => {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand>
-            <Link to={'/'} className='logo'>VR<sup>2</sup>e-Clinic</Link>
+            <Link to={'/'} className='logo'>HealPlus<span>&#43;</span></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">

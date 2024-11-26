@@ -76,11 +76,11 @@ const UserHome = () => {
    
    return (
       <>
-         <div className='main'>
-            <div className="layout">
+         <div className='main' style={{backgroundColor:"#f5f5f5"}}>
+            <div className="layout" style={{display:"flex",flexDirection:"row"}}>
                <div className="sidebar" style={{height:"112.7vh",backgroundColor:"#f5f5f5",color:"rgb(229,9,20)"}}>
                   <div className="logo" style={{marginBottom:"12rem",marginTop:"1rem"}}>
-                     <h2>HealPlus<span>&#43;</span></h2>
+                     <h2>VirtualVitals</h2>
                   </div>
                   <div className="menu">
                      <div className="menu-items" onClick={()=>{window.location.href="/userhome"}}>
@@ -99,9 +99,10 @@ const UserHome = () => {
                      </div>
                   </div>
                </div>
-               <div className="content">
-                  <div className="header">
-                     <div className="header-content">
+               <div className="content" style={{ flex: 1 }}>
+                  
+                  {/* <div className="header"> */}
+                     <div className="header-content" >
                         
                         <Badge className={`notify ${activeMenuItem === 'notification' ? 'active' : ''}`} onClick={() => handleMenuItemClick('notification')} count={userdata?.notification ? userdata.notification.length : 0}>
                            <NotificationsIcon style={{color:"rgb(229,9,20)"}} className="icon" />
@@ -111,7 +112,7 @@ const UserHome = () => {
                         <h3 style={{position:"relative",top:"2px"}}>{userdata.fullName}</h3>
                         }
                      </div>
-                  </div>
+                  {/* </div> */}
                   <div className="body" style={{
                      height: "100vh",
                      overflow: "auto"

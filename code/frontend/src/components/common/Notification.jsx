@@ -62,15 +62,15 @@ const Notification = () => {
    return (
       <div>
          <h2 className='p-3 text-center'>Notification</h2>
-         <Tabs>
-            <Tabs.TabPane tab="unRead" key={0}>
+         <Tabs className='mx-4 fw-bold'>
+            <Tabs.TabPane tab="UnRead" key={0}>
                <div className="d-flex justify-content-end">
                   <h4 style={{ cursor: 'pointer',  }} onClick={handleAllMarkRead} className="p-2">Mark all read</h4>
                </div>
                {user?.notification.map((notificationMsg) => (
-                  <div onClick={notificationMsg.onClickPath} className="card">
-                     <div className="card-text">
-                        {notificationMsg.message}
+                  <div onClick={notificationMsg.onClickPath} className="card mx-auto py-1 p-3" style={{margin:'5px'}}>
+                     <div className="card-text text-capitalize">
+                        {notificationMsg.message}<br></br>
                      </div>
                   </div>
                ))}
@@ -80,9 +80,9 @@ const Notification = () => {
                   <h4 style={{ cursor: 'pointer' }} onClick={handledeleteAllMark} className="p-2">Delete all read</h4>
                </div>
                {user?.seennotification.map((notificationMsg) => (
-                  <div style={{ cursor: 'pointer' }} className="card" >
-                     <div className="card-text" onClick={() => navigate(notificationMsg.onClickPath)}>
-                        {notificationMsg.message}
+                  <div style={{ cursor: 'pointer' }} className="card mx-auto py-1 p-3" >
+                     <div className="card-text text-capitalize" onClick={() => navigate(notificationMsg.onClickPath)}>
+                        {notificationMsg.message}<br></br>
                      </div>
                   </div>
                ))}
